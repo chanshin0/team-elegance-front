@@ -15,20 +15,20 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-  const isLoggedIn = true // 로그인 분기처리
-
   return (
     <html lang="en">
-      {isLoggedIn ?
       <body className={`${inter.className} 
-      mx-auto h-screen flex flex-col items-center 
-      md:max-w-[120rem]`}
+      mx-auto w-full h-screen flex flex-col items-center 
+      md:max-w-7xl`}
       >
       {children}
+      <footer className="
+      fixed bottom-0 w-full bg-orange-300
+      md:max-w-7xl
+      ">
+        bottom navBar here
+      </footer>
       </body>
-      :
-      <></> // <InitPage/> 로그인하지 않은 유저 보여줄 초기화면
-      }
     </html>
   )
 }
