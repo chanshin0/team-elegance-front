@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import BotNavBar from './_commons/nav/BotNavBar'
+import TopNavBar from './_commons/nav/TopNavBar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,16 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} 
-      mx-auto w-full h-screen flex flex-col items-center 
-      md:max-w-7xl`}
+      mx-auto w-full h-full flex flex-col items-center mt-24
+      md:max-w-7xl md:w-4/5`}
       >
-      {children}
-      <footer className="
-      fixed bottom-0 w-full bg-orange-300
-      md:max-w-7xl
-      ">
-        bottom navBar here
-      </footer>
+      <TopNavBar/>
+      {children} 
+      <BotNavBar/>
       </body>
     </html>
   )
