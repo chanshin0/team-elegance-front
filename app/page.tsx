@@ -1,11 +1,17 @@
+import Recommend from "./_commons/recommend/Recommend";
+import SearchBar from "./_commons/search/SearchBar";
+import StoresList from "./stores/list/page";
+
 export default function Home() {
   return (
-    <main 
-    className='
+    <main
+      className="
     w-full h-full flex flex-col items-center
-    '
+    "
     >
-      main contents here
+      <SearchBar />
+      <Recommend />
+      <StoresList />
     </main>
-  )
+  );
 }

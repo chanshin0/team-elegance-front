@@ -1,10 +1,15 @@
+import StoreCard from "@/app/_commons/card/StoreCard";
+
 export default function StoresList() {
   return (
-    <main 
-    className='
-    '
+    <main
+      className="
+      flex flex-col
+    "
     >
-      store list here
+      <StoreCard />
+      <StoreCard />
+      <StoreCard />
     </main>
-  )
+  );
 }
