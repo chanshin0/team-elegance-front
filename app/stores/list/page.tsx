@@ -10,6 +10,7 @@ export default function StoresList() {
       <StoreCard />
       <StoreCard />
       <StoreCard />
+      <StoreCard />
     </main>
   );
 }
