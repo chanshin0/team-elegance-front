@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${inter.className} 
-      mx-auto w-full h-full flex flex-col items-center mt-24 mb-20 
+      mx-auto w-full h-full flex flex-col items-center mt-24 mb-20 px-6
       md:max-w-7xl md:w-4/5`}
       >
         <TopNavBar />

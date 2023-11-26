@@ -6,10 +6,10 @@ export default function StoreCard({ storesList }) {
   return (
     <main
       className="
-    flex flex-col w-full my-3 rounded-xl shadow-xl hover:scale-105
+    flex flex-col w-full max-w-sm mx-8 my-3 rounded-xl shadow-xl  hover:scale-105
     "
     >
-      <Image alt="store-main-image" src={storeMainImg} />
+      <Image alt="store-main-image" src={storeMainImg} className="w-full" />
       <div
         className="
       px-2 py-1 h-20 flex flex-col justify-around

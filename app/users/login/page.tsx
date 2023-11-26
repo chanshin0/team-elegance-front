@@ -23,14 +23,14 @@ export default function Login() {
   return (
     <main
       className="
-      flex flex-col items-center mt-24
+      flex flex-col items-center
       "
     >
       <Image
         src={MainLogo}
         alt="logo-elegance"
         className="
-      w-full max-w-lg mb-[-2rem] 
+      w-full max-w-sm my-[-2rem] 
       "
       />
       <Input placeholder="ID" classes="w-48 my-1" />

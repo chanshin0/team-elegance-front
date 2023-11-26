@@ -5,7 +5,7 @@ export default function SearchBar() {
   return (
     <main
       className="
-      my-5 px-4 w-5/6 relative flex items-center
+      my-5 px-4 w-full relative flex items-center
       md:max-w-xl
     "
     >
@@ -19,7 +19,7 @@ export default function SearchBar() {
         name=""
         id=""
         className="
-        border-orange-500 border-2 rounded-2xl h-10 w-full
+        border-orange-500 border-2 rounded-2xl h-10 w-full pl-8
         "
       />
     </main>
