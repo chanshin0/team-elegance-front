@@ -1,6 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 interface NavBarItemProps {
   iconName: string;
@@ -8,19 +10,7 @@ interface NavBarItemProps {
 }
 
 export default function NavBarItem({ iconName, url }: NavBarItemProps) {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    if (iconName === "home") return;
-    setIsHovered(true);
-  };
-  const handleMouseLeave = () => {
-    if (iconName === "home") return;
-    setIsHovered(false);
-  };
-
-  // useEffect(()=>{
-  // }, [isHovered])
+  const pathName = usePathname();
 
   return (
     <div
@@ -30,13 +20,13 @@ export default function NavBarItem({ iconName, url }: NavBarItemProps) {
     >
       <Link href={url}>
         <Image
-          src={`/assets/nav/icon_${iconName}${isHovered ? "_hovered" : ""}.png`}
+          src={`/assets/nav/icon_${iconName}${
+            iconName !== "home" && pathName === url ? "_hovered" : ""
+          }.png`}
           alt={`icon_${iconName}`}
           width={iconName === "home" ? 100 : 35}
           height={35}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          className={iconName === "home" ? "hover:scale-125" : ""}
+          className="hover:scale-[1.15]"
         />
       </Link>
     </div>

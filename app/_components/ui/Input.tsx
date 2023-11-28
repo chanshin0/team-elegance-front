@@ -3,6 +3,7 @@ interface InputProps {
   label?: string;
   placeholder?: string;
   classes?: string;
+  isRequired?: boolean;
 }
 
 export default function Input({
@@ -10,6 +11,7 @@ export default function Input({
   label,
   placeholder,
   classes,
+  isRequired,
 }: InputProps) {
   return (
     <div>
@@ -17,7 +19,7 @@ export default function Input({
         htmlFor={label}
         className="block text-sm font-medium leading-6 text-orange-500"
       >
-        {label}
+        {/* {label} */}
       </label>
       <div className={`relative mt-2 rounded-md shadow-sm ${classes}`}>
         <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-1">
@@ -27,7 +29,8 @@ export default function Input({
           type={type}
           name={label}
           id={label}
-          className="block w-full rounded-xl border-0 py-1.5 pl-5 pr-10 text-gray-900 ring-1 ring-inset ring-orange-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
+          required={isRequired}
+          className="block w-full rounded-xl border-0 py-1.5 pl-5 pr-10 text-gray-900 ring-1 ring-inset ring-orange-300 placeholder:text-gray-400 placeholder:text-sm focus:ring-2 focus:ring-inset focus:ring-orange-500 sm:text-sm sm:leading-6"
           placeholder={placeholder}
         />
         {/* <div className="absolute inset-y-0 right-0 flex items-center">
