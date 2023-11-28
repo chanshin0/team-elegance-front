@@ -5,9 +5,9 @@ export default function LoginLayout({
 }) {
   return (
     <main
-      className="
-    w-full h-full absolute top-0 z-[55] px-12 bg-white overflow-y-auto flex flex-col justify-center
-    "
+      // className="
+    // w-full h-full absolute top-0 z-[55] px-12 bg-white overflow-y-auto flex flex-col justify-center
+    // "
     >
       {children}
     </main>

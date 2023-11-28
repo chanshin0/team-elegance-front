@@ -1,9 +1,15 @@
 "use client";
 
+import { useParams, usePathname } from "next/navigation";
 import NavBarItem from "./NavBarItem";
+import { useEffect } from "react";
 
 export default function BotNavBar() {
   const userId = 1004; // 추후 바인딩 필요
+  const params = usePathname();
+
+  console.log(params);
+  useEffect(() => {}, [params]);
 
   const menus = "search, heart, home, cart, user".split(", ");
   const menusUrl =

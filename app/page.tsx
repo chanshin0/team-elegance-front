@@ -1,7 +1,7 @@
-import StoreCard from "./_commons/card/StoreCard";
-import Recommend from "./_commons/recommend/Recommend";
-import SearchBar from "./_commons/search/SearchBar";
-import StoresList from "./stores/list/page";
+import StoreCard from "./_components/card/StoreCard";
+import Recommend from "./_components/recommend/Recommend";
+import SearchBar from "./_components/search/SearchBar";
+import StoresList from "./(routes)/stores/list/page";
 
 export default function Home() {
   return (

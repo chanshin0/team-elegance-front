@@ -1,4 +1,4 @@
-import CartMenuCard from "@/app/_commons/card/CartMenuCard";
+import CartMenuCard from "@/app/_components/card/CartMenuCard";
 import Image from "next/image";
 
 export default function Cart() {

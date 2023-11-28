@@ -1,7 +1,7 @@
 "use client";
 
-import Input from "@/app/_commons/ui/Input";
-import Button from "@/app/_commons/ui/Button";
+import Input from "@/app/_components/ui/Input";
+import Button from "@/app/_components/ui/Button";
 
 import Image from "next/image";
 import MainLogo from "@/public/assets/nav/logo_elegance_big.png";
