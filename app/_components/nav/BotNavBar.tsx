@@ -14,7 +14,7 @@ export default function BotNavBar() {
   });
 
   return (
-    <main
+    <nav
       className="h-20 w-full rounded-t-3xl flex justify-around fixed bottom-[-6px] z-50 bg-white
     md:max-w-7xl
     "
@@ -22,6 +22,6 @@ export default function BotNavBar() {
       {navButtons.map((v, idx) => (
         <NavBarItem iconName={v.name} url={v.url} key={idx} />
       ))}
-    </main>
+    </nav>
   );
 }

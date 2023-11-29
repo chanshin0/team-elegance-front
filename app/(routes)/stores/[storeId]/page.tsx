@@ -1,16 +1,20 @@
-'use client'
+"use client";
 
-import { useParams } from 'next/navigation';
+import StoreCard from "@/app/_components/card/StoreCard";
+import { useParams } from "next/navigation";
+import StoreMenuList from "./_components/StoreMenuList";
 
 export default function Store() {
-  const storeId = useParams().storeId
+  const storeId = useParams().storeId;
 
   return (
-    <main 
-    className='
-    '
+    <section
+      className="
+      flex flex-col items-center gap-1 max-w-sm
+    "
     >
-      store {storeId} here
-    </main>
-  )
+      <StoreCard showDetails={true} />
+      <StoreMenuList />
+    </section>
+  );
 }

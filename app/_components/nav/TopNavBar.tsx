@@ -11,7 +11,7 @@ export default function TopNavBar() {
   const [userLocation, setUserLocation] = useState("너네집");
 
   return (
-    <main
+    <nav
       className="h-24 w-full flex justify-between items-center fixed top-0 shadow-sm z-50 bg-white
     md:max-w-7xl
     "
@@ -37,6 +37,6 @@ export default function TopNavBar() {
         <Image src={LocationLogo} alt="location" />
         <p className="ml-2">{userLocation}</p>
       </div>
-    </main>
+    </nav>
   );
 }
