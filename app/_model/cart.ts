@@ -4,4 +4,5 @@ export type CartData = {
   price: number;
   options: string[];
   quantity: number;
+  id: number;
 };
