@@ -106,7 +106,7 @@ export default function Cart() {
           ))}
         </ul>
       ) : (
-        <p className=" text-center mt-5">장바구니가 비었어요🥲</p>
+        <p className=" text-center mt-5">장바구니가 비었어요🥲 </p>
       )}
 
       <ul className=" mt-16 ">
