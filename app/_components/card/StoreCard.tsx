@@ -1,20 +1,29 @@
+"use client";
+
 import Image from "next/image";
 import orderSampleImg from "@/public/assets/card/orderSample.png";
 import storeMainImg from "@/public/assets/card/storeMainSample.png";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { IoIosHeart } from "react-icons/io";
 import Button from "../ui/Button";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 interface StoreCardProps {
   showDetails: boolean;
 }
 
 export default function StoreCard({ showDetails = false }) {
+  const pathName = usePathname();
+  const infoPath = `${pathName}/info`;
+  const router = useRouter();
+
   return (
-    <main
+    <section
       className="
     flex flex-col w-full max-w-sm mx-8 my-3 rounded-xl shadow-xl  hover:scale-105
     "
+      onClick={() => router.push("/stores/1/info")}
     >
       <Image alt="store-main-image" src={storeMainImg} className="w-full" />
       <div
@@ -50,15 +59,17 @@ export default function StoreCard({ showDetails = false }) {
             <p>배달팁 {3000}원</p>
           </div>
           {showDetails && (
-            <Button
-              value="가게 정보"
-              filled={true}
-              classes="w-[70px] h-[25px]"
-              text="xs"
-            />
+            <Link href={infoPath}>
+              <Button
+                value="가게 정보"
+                filled={true}
+                classes="w-[70px] h-[25px]"
+                text="xs"
+              />
+            </Link>
           )}
         </div>
       </div>
-    </main>
+    </section>
   );
 }

@@ -21,7 +21,7 @@ export default function Input({
       >
         {/* {label} */}
       </label>
-      <div className={`relative mt-2 rounded-md shadow-sm ${classes}`}>
+      <div className={`relative rounded-md shadow-sm ${classes}`}>
         <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-1">
           <span className="text-orange-400 sm:text-sm"></span>
         </div>

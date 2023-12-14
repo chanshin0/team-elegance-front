@@ -2,7 +2,7 @@
 
 import StoreCard from "@/app/_components/card/StoreCard";
 import { useParams } from "next/navigation";
-import StoreMenuList from "./_components/StoreMenuList";
+import StoreMenuList from "../_components/StoreMenuList";
 
 export default function Store() {
   const storeId = useParams().storeId;
