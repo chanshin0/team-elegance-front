@@ -3,6 +3,10 @@
 import Button from "@/app/_components/ui/Button";
 import Input from "@/app/_components/ui/Input";
 
+interface FormValues {
+  [key: string]: string;
+}
+
 export default function SignUp() {
   const labels = [
     "닉네임",
@@ -13,15 +17,18 @@ export default function SignUp() {
     "비밀번호 확인",
   ];
 
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // 계산
-    const reqBody = labels.reduce((acc, label) => {
-      acc[label] = e.target[label].value;
-      return acc;
-    }, {});
-    console.log("body", reqBody);
+    const formData = new FormData(e.currentTarget);
+    const reqBody: { [key: string]: FormDataEntryValue } = {};
+    labels.forEach((label) => {
+      const value = formData.get(label);
+      if (value !== null) {
+        reqBody[label] = value;
+      }
+    });
 
     // api call here
   };

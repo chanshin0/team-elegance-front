@@ -54,7 +54,7 @@ export default function Cart() {
         return newObj;
       });
     } else {
-      setCartRawData(() => {
+      setCartRawData((): any => {
         const newObj = {
           ...cartRawData,
           items: cartRawData.items

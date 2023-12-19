@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { UsageInfo } from "../[userId]/wallet/page";
+import { UsageInfo } from "../[userId]/page";
 
 interface UsageHistoryProps {
   usageList: UsageInfo[];

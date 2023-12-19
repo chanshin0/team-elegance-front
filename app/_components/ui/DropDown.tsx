@@ -5,7 +5,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 interface dropDownProps {
-  placeholder: string;
+  placeholder?: string;
   options: Array<string>;
 }
 
